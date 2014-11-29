@@ -1,0 +1,10 @@
+D:\projects\Zen.Imobi\Base,Tests\bin\Debug\Base,Tests.dll
+D:\projects\Zen.Imobi\Base,Tests\bin\Debug\Base,Tests.pdb
+D:\projects\Zen.Imobi\Base,Tests\bin\Debug\Base.dll
+D:\projects\Zen.Imobi\Base,Tests\bin\Debug\Base.pdb
+D:\projects\Zen.Imobi\Base,Tests\obj\Debug\Base,Tests.csprojResolveAssemblyReference.cache
+D:\projects\Zen.Imobi\Base,Tests\obj\Debug\Base,Tests.dll
+D:\projects\Zen.Imobi\Base,Tests\obj\Debug\Base,Tests.pdb
+D:\projects\Zen.Imobi\Base,Tests\bin\Debug\Base,Tests.dll.CodeAnalysisLog.xml
+D:\projects\Zen.Imobi\Base,Tests\bin\Debug\Base,Tests.dll.lastcodeanalysissucceeded
+D:\projects\Zen.Imobi\Base,Tests\obj\Debug\Base,Tests.rewritten

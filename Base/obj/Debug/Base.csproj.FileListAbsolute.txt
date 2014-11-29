@@ -1,0 +1,6 @@
+D:\projects\Zen.Imobi\Base\bin\Debug\Base.dll
+D:\projects\Zen.Imobi\Base\bin\Debug\Base.pdb
+D:\projects\Zen.Imobi\Base\obj\Debug\Base.dll
+D:\projects\Zen.Imobi\Base\obj\Debug\Base.pdb
+D:\projects\Zen.Imobi\Base\bin\Debug\Base.dll.CodeAnalysisLog.xml
+D:\projects\Zen.Imobi\Base\bin\Debug\Base.dll.lastcodeanalysissucceeded
