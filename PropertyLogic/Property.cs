@@ -1,5 +1,6 @@
 ﻿using Base;
 using Base.Domain;
+using PropertyLogic.Data;
 using System;
 using System.Diagnostics.Contracts;
 
@@ -7,13 +8,9 @@ namespace PropertyLogic
 {
     public class Property : Entity
     {
-        internal enum PropertyStatus
-        {
-            Available = 0,
-            Occupied = 1
-        }
-
         private readonly IPropertiesRepository _propertiesRepository;
+
+        public PropertyStatus Status { get; set; }
 
         public Property(IPropertiesRepository propertiesRepository)
         {

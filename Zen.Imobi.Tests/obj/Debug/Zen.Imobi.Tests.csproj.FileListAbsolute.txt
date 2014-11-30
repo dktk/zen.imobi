@@ -64,3 +64,6 @@ D:\projects\Zen.Imobi\Zen.Imobi.Tests\bin\Debug\Zen.Imobi.Models.dll
 D:\projects\Zen.Imobi\Zen.Imobi.Tests\bin\Debug\Zen.Imobi.Resources.dll
 D:\projects\Zen.Imobi\Zen.Imobi.Tests\bin\Debug\Zen.Imobi.Models.pdb
 D:\projects\Zen.Imobi\Zen.Imobi.Tests\bin\Debug\Zen.Imobi.Resources.pdb
+D:\projects\Zen.Imobi\Zen.Imobi.Tests\bin\Debug\AutoMapper.Net4.dll
+D:\projects\Zen.Imobi\Zen.Imobi.Tests\bin\Debug\AutoMapper.dll
+D:\projects\Zen.Imobi\Zen.Imobi.Tests\bin\Debug\AutoMapper.xml

@@ -10,3 +10,8 @@ D:\projects\Zen.Imobi\PropertyLogic\obj\Debug\PropertyLogic.pdb
 D:\projects\Zen.Imobi\PropertyLogic\bin\Debug\PropertyLogic.dll.CodeAnalysisLog.xml
 D:\projects\Zen.Imobi\PropertyLogic\bin\Debug\PropertyLogic.dll.lastcodeanalysissucceeded
 D:\projects\Zen.Imobi\PropertyLogic\obj\Debug\PropertyLogic.rewritten
+D:\projects\Zen.Imobi\PropertyLogic\bin\Debug\EntityFramework.dll
+D:\projects\Zen.Imobi\PropertyLogic\bin\Debug\EntityFramework.xml
+D:\projects\Zen.Imobi\PropertyLogic\bin\Debug\PropertyLogic.dll.config
+D:\projects\Zen.Imobi\PropertyLogic\bin\Debug\EntityFramework.SqlServer.dll
+D:\projects\Zen.Imobi\PropertyLogic\bin\Debug\EntityFramework.SqlServer.xml

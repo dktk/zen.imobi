@@ -12,7 +12,12 @@ namespace Base
 
         public static void AgainstNullOrEmpty(Guid value)
         {
-            Contract.Requires<ArgumentNullException>(value == Guid.Empty);
+            Contract.Requires<ArgumentNullException>(value != Guid.Empty);
+        }
+
+        public static void AgainstNullOrEmpty(object value)
+        {
+            Contract.Requires<ArgumentNullException>(value != null);
         }
     }
 }

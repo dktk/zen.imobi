@@ -79,3 +79,6 @@ D:\projects\Zen.Imobi\Zen.Imobi.Web\bin\Base.pdb
 D:\projects\Zen.Imobi\Zen.Imobi.Web\bin\Zen.Imobi.Web.dll.CodeAnalysisLog.xml
 D:\projects\Zen.Imobi\Zen.Imobi.Web\bin\Zen.Imobi.Web.dll.lastcodeanalysissucceeded
 D:\projects\Zen.Imobi\Zen.Imobi.Web\obj\Debug\Zen.Imobi.Web.rewritten
+D:\projects\Zen.Imobi\Zen.Imobi.Web\bin\AutoMapper.Net4.dll
+D:\projects\Zen.Imobi\Zen.Imobi.Web\bin\AutoMapper.dll
+D:\projects\Zen.Imobi\Zen.Imobi.Web\bin\AutoMapper.xml

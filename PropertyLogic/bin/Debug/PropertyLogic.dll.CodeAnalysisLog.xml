@@ -2,9 +2,23 @@
 <?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 12.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
 <FxCopReport Version="12.0">
  <Namespaces>
+  <Namespace Name="PropertyLogic">
+   <Messages>
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2014-11-30 02:12:12Z" FixCategory="Breaking">
+     <Issue Certainty="50" Level="Warning">Consider merging the types defined in 'PropertyLogic' with another namespace.</Issue>
+    </Message>
+   </Messages>
+  </Namespace>
+  <Namespace Name="PropertyLogic.Data">
+   <Messages>
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2014-11-30 02:12:12Z" FixCategory="Breaking">
+     <Issue Certainty="50" Level="Warning">Consider merging the types defined in 'PropertyLogic.Data' with another namespace.</Issue>
+    </Message>
+   </Messages>
+  </Namespace>
   <Namespace Name="PropertyLogic.Events">
    <Messages>
-    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2014-11-29 22:45:11Z" FixCategory="Breaking">
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2014-11-30 02:12:12Z" FixCategory="Breaking">
      <Issue Certainty="50" Level="Warning">Consider merging the types defined in 'PropertyLogic.Events' with another namespace.</Issue>
     </Message>
    </Messages>
@@ -15,38 +29,56 @@
    <Modules>
     <Module Name="propertylogic.dll">
      <Messages>
-      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2014-11-29 22:45:11Z" FixCategory="NonBreaking">
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2014-11-30 02:12:12Z" FixCategory="NonBreaking">
        <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'PropertyLogic.dll' with a strong name key.</Issue>
       </Message>
-      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2014-11-29 22:45:11Z" FixCategory="NonBreaking">
+      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2014-11-30 02:12:12Z" FixCategory="NonBreaking">
        <Issue Certainty="95" Level="Error">Mark 'PropertyLogic.dll' with CLSCompliant(true) because it exposes externally visible types.</Issue>
       </Message>
      </Messages>
      <Namespaces>
       <Namespace Name="PropertyLogic">
        <Types>
-        <Type Name="Location" Kind="Class" Accessibility="Public" ExternallyVisible="True">
-         <Members>
-          <Member Name="#.ctor(System.String,System.String,System.UInt32,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
-           <Messages>
-            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2014-11-29 22:45:11Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Error" Path="d:\projects\Zen.Imobi\PropertyLogic" File="Location.cs" Line="6">Replace method 'Location.Location(string, string, uint, string, string)' with an overload that supplies all default arguments.</Issue>
-            </Message>
-           </Messages>
-          </Member>
-         </Members>
-        </Type>
         <Type Name="Property" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="Property" TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716" Status="Active" Created="2014-11-29 22:45:11Z" FixCategory="Breaking">
+          <Message Id="Property" TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716" Status="Active" Created="2014-11-30 02:12:12Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="95" Level="Error">Rename type 'Property' so that it no longer conflicts with the reserved language keyword 'Property'. Using a reserved keyword as the name of a type makes it harder for consumers in other languages to use the type.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#Create(System.Guid,PropertyLogic.Location,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="location" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2014-11-29 22:45:11Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Warning" Path="d:\projects\Zen.Imobi\PropertyLogic" File="Property.cs" Line="26">Parameter 'location' of 'Property.Create(Guid, Location, string)' is never used. Remove the parameter or use it in the method body.</Issue>
+            <Message Id="location" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2014-11-30 02:12:12Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="d:\projects\Zen.Imobi\PropertyLogic" File="Property.cs" Line="23">Parameter 'location' of 'Property.Create(Guid, Location, string)' is never used. Remove the parameter or use it in the method body.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="PropertyLogic.Data">
+       <Types>
+        <Type Name="IPropertiesRepository" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="AvoidEmptyInterfaces" Category="Microsoft.Design" CheckId="CA1040" Status="Active" Created="2014-11-30 02:12:12Z" FixCategory="Breaking">
+           <Issue Certainty="90" Level="Warning">Define a custom attribute to replace 'IPropertiesRepository'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="PropertyContext" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#OnModelCreating(System.Data.Entity.DbModelBuilder)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2014-11-30 02:12:12Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\projects\Zen.Imobi\PropertyLogic\Data" File="PropertyContext.cs" Line="20">In externally visible method 'PropertyContext.OnModelCreating(DbModelBuilder)', validate parameter 'modelBuilder' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Properties" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2014-11-30 02:12:12Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning">Change 'PropertyContext.Properties' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -70,6 +102,16 @@
    <MessageLevel Certainty="95">CriticalError</MessageLevel>
    <File Name="designrules.dll" Version="12.0.0.0" />
   </Rule>
+  <Rule TypeName="AvoidEmptyInterfaces" Category="Microsoft.Design" CheckId="CA1040">
+   <Name>Avoid empty interfaces</Name>
+   <Description>Interfaces are meant to contain members that specify a set of behaviors. To mark or label a class, use an attribute instead of an empty interface.</Description>
+   <Resolution Name="Default">Define a custom attribute to replace {0}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182128.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Warning</MessageLevel>
+   <File Name="designrules.dll" Version="12.0.0.0" />
+  </Rule>
   <Rule TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020">
    <Name>Avoid namespaces with few types</Name>
    <Description>A namespace should generally have more than five types.</Description>
@@ -80,15 +122,15 @@
    <MessageLevel Certainty="50">Warning</MessageLevel>
    <File Name="designrules.dll" Version="12.0.0.0" />
   </Rule>
-  <Rule TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026">
-   <Name>Default parameters should not be used</Name>
-   <Description>Some programming languages do not support default parameters. Replace default parameters with method overloads that supply the default argument.</Description>
-   <Resolution Name="Default">Replace method {0} with an overload that supplies all default arguments.</Resolution>
+  <Rule TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227">
+   <Name>Collection properties should be read only</Name>
+   <Description>Properties that return collections should be read-only so that users cannot entirely replace the backing store. Users can still modify the contents of the collection by calling relevant methods on the collection. Note that the XmlSerializer class has special support for deserializing read-only collections. See the XmlSerializer overview for more information.</Description>
+   <Resolution Name="Default">Change {0} to be read-only by removing the property setter.</Resolution>
    <Owner />
-   <Url>http://msdn.microsoft.com/library/ms182135.aspx</Url>
+   <Url>http://msdn.microsoft.com/library/ms182327.aspx</Url>
    <Email>[none]</Email>
-   <MessageLevel Certainty="75">Error</MessageLevel>
-   <File Name="designrules.dll" Version="12.0.0.0" />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="12.0.0.0" />
   </Rule>
   <Rule TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716">
    <Name>Identifiers should not match keywords</Name>
@@ -119,6 +161,16 @@
    <Email>[none]</Email>
    <MessageLevel Certainty="95">Warning</MessageLevel>
    <File Name="usagerules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062">
+   <Name>Validate arguments of public methods</Name>
+   <Description>All reference arguments passed to externally visible methods should be checked against null (Nothing in VB). If appropriate, throw a System.ArgumentNullException when the argument is null.</Description>
+   <Resolution Name="Default">In externally visible method {0}, validate parameter '{1}' before using it.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182182.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="12.0.0.0" />
   </Rule>
  </Rules>
  <Localized>
