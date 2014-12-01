@@ -21,8 +21,8 @@ namespace PropertyLogic
 
         public Property(IPropertiesRepository propertiesRepository)
         {
-            Guard.ConstructorAssignment(_propertiesRepository, propertiesRepository);
-
+            Guard.AgainstNullOrEmpty(propertiesRepository);
+            
             _propertiesRepository = propertiesRepository;
         }
 

@@ -20,11 +20,5 @@ namespace Base
         {
             Contract.Requires<ArgumentNullException>(value != null);
         }
-
-        public static void ConstructorAssignment<T>(T field, T value)
-        {
-            Contract.Requires<ArgumentNullException>(!value.Equals(default(T)));
-            Contract.Ensures(field.Equals(value));
-        }
     }
 }
