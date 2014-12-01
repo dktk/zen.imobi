@@ -7,12 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zen.Imobi.Web", "Zen.Imobi.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zen.Imobi.Tests", "Zen.Imobi.Tests\Zen.Imobi.Tests.csproj", "{61292D8B-F3E1-4385-9F22-5E5ED1A00AA9}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{057F3946-37BA-4280-9897-2DCC75ABCB3E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.Solution Items", "0.Solution Items", "{057F3946-37BA-4280-9897-2DCC75ABCB3E}"
 	ProjectSection(SolutionItems) = preProject
 		C:\Users\calin\OneDrive\Documents\zen-imobi.html = C:\Users\calin\OneDrive\Documents\zen-imobi.html
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Property", "Property", "{141BF05B-DCBB-4ADA-8FB0-43A3B8DE9E34}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Property", "3.Property", "{141BF05B-DCBB-4ADA-8FB0-43A3B8DE9E34}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertyLogic", "PropertyLogic\PropertyLogic.csproj", "{78006268-5649-4133-9EBE-77D2E5349E9C}"
 EndProject
@@ -25,7 +25,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{8BFA62
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{33281271-7A54-4150-816E-33A8A8D6FB20}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Infrastructure", "1.Infrastructure", "{33281271-7A54-4150-816E-33A8A8D6FB20}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base", "Base\Base.csproj", "{FA39996D-37E4-46C6-9E5C-2895A034A72B}"
 EndProject
@@ -33,7 +33,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base,Tests", "Base,Tests\Ba
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zen.Imobi.Models", "Zen.Imobi.Models\Zen.Imobi.Models.csproj", "{75DAD35E-EB93-4A89-A47B-4353940E1600}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{647F65F3-EA6F-4AD4-8304-48460BE1E2B9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.UI", "2.UI", "{647F65F3-EA6F-4AD4-8304-48460BE1E2B9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zen.Imobi.Resources", "Zen.Imobi.Resources\Zen.Imobi.Resources.csproj", "{98219EC7-1506-466B-A609-5CA24A3357EB}"
 EndProject

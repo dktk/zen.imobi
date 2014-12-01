@@ -11,10 +11,17 @@ namespace PropertyLogic
         private readonly IPropertiesRepository _propertiesRepository;
 
         public PropertyStatus Status { get; set; }
+        public string Description { get; set; }
+
+        [ContractInvariantMethod]
+        private void Invariants()
+        {
+            Contract.Invariant(Description.IsNotNullOrEmpty());
+        }
 
         public Property(IPropertiesRepository propertiesRepository)
         {
-            Contract.Requires<ArgumentNullException>(propertiesRepository.IsNotNull());
+            Guard.ConstructorAssignment(_propertiesRepository, propertiesRepository);
 
             _propertiesRepository = propertiesRepository;
         }

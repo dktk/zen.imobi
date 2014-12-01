@@ -2,8 +2,6 @@ D:\projects\Zen.Imobi\Base.Domain\bin\Debug\Base.Domain.dll
 D:\projects\Zen.Imobi\Base.Domain\bin\Debug\Base.Domain.pdb
 D:\projects\Zen.Imobi\Base.Domain\obj\Debug\Base.Domain.dll
 D:\projects\Zen.Imobi\Base.Domain\obj\Debug\Base.Domain.pdb
-D:\projects\Zen.Imobi\Base.Domain\bin\Debug\Base.Domain.dll.CodeAnalysisLog.xml
-D:\projects\Zen.Imobi\Base.Domain\bin\Debug\Base.Domain.dll.lastcodeanalysissucceeded
 D:\projects\Zen.Imobi\Base.Domain\obj\Debug\Base.Domain.rewritten
 D:\projects\Zen.Imobi\Base.Domain\bin\Debug\Base.dll
 D:\projects\Zen.Imobi\Base.Domain\bin\Debug\EntityFramework.dll

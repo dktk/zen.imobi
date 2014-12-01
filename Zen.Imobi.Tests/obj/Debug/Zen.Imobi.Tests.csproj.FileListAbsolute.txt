@@ -57,8 +57,6 @@ D:\projects\Zen.Imobi\Zen.Imobi.Tests\bin\Debug\Ninject.xml
 D:\projects\Zen.Imobi\Zen.Imobi.Tests\bin\Debug\PropertyLogic.pdb
 D:\projects\Zen.Imobi\Zen.Imobi.Tests\bin\Debug\Base.Domain.pdb
 D:\projects\Zen.Imobi\Zen.Imobi.Tests\bin\Debug\Base.pdb
-D:\projects\Zen.Imobi\Zen.Imobi.Tests\bin\Debug\Zen.Imobi.Tests.dll.CodeAnalysisLog.xml
-D:\projects\Zen.Imobi\Zen.Imobi.Tests\bin\Debug\Zen.Imobi.Tests.dll.lastcodeanalysissucceeded
 D:\projects\Zen.Imobi\Zen.Imobi.Tests\obj\Debug\Zen.Imobi.Tests.rewritten
 D:\projects\Zen.Imobi\Zen.Imobi.Tests\bin\Debug\Zen.Imobi.Models.dll
 D:\projects\Zen.Imobi\Zen.Imobi.Tests\bin\Debug\Zen.Imobi.Resources.dll

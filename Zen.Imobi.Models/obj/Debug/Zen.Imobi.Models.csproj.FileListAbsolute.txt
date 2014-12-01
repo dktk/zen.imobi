@@ -5,6 +5,4 @@ D:\projects\Zen.Imobi\Zen.Imobi.Models\obj\Debug\Zen.Imobi.Models.dll
 D:\projects\Zen.Imobi\Zen.Imobi.Models\obj\Debug\Zen.Imobi.Models.pdb
 D:\projects\Zen.Imobi\Zen.Imobi.Models\bin\Debug\Zen.Imobi.Resources.dll
 D:\projects\Zen.Imobi\Zen.Imobi.Models\bin\Debug\Zen.Imobi.Resources.pdb
-D:\projects\Zen.Imobi\Zen.Imobi.Models\bin\Debug\Zen.Imobi.Models.dll.CodeAnalysisLog.xml
-D:\projects\Zen.Imobi\Zen.Imobi.Models\bin\Debug\Zen.Imobi.Models.dll.lastcodeanalysissucceeded
 D:\projects\Zen.Imobi\Zen.Imobi.Models\obj\Debug\Zen.Imobi.Models.rewritten

@@ -7,8 +7,6 @@ D:\projects\Zen.Imobi\PropertyLogic\bin\Debug\Base.pdb
 D:\projects\Zen.Imobi\PropertyLogic\obj\Debug\PropertyLogic.csprojResolveAssemblyReference.cache
 D:\projects\Zen.Imobi\PropertyLogic\obj\Debug\PropertyLogic.dll
 D:\projects\Zen.Imobi\PropertyLogic\obj\Debug\PropertyLogic.pdb
-D:\projects\Zen.Imobi\PropertyLogic\bin\Debug\PropertyLogic.dll.CodeAnalysisLog.xml
-D:\projects\Zen.Imobi\PropertyLogic\bin\Debug\PropertyLogic.dll.lastcodeanalysissucceeded
 D:\projects\Zen.Imobi\PropertyLogic\obj\Debug\PropertyLogic.rewritten
 D:\projects\Zen.Imobi\PropertyLogic\bin\Debug\EntityFramework.dll
 D:\projects\Zen.Imobi\PropertyLogic\bin\Debug\EntityFramework.xml
