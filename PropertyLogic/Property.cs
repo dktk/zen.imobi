@@ -45,7 +45,7 @@ namespace PropertyLogic
                 
                 Description = description,
                 Id = propertyId,
-                Status = (sbyte)PropertyStatus.Available,
+                Status = (byte)PropertyStatus.Available,
                 UserId = userId
             });
 

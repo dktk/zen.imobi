@@ -1,8 +1,12 @@
-﻿
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
 namespace PropertyLogic.Data
 {
+    [Table("Locations", Schema="property")]
     public class LocationDao
     {
+        public long Id { get; set; }
+
         public string Country { get; set; }
 
         public string ZipCode { get; set; }

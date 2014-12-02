@@ -6,8 +6,8 @@ namespace PropertyLogic.Data
 {
     public class PropertyContext : DbContext
     {
-        public virtual ICollection<PropertyDao> Properties { get; set; }
-        public virtual ICollection<LocationDao> Locations { get; set; }
+        public virtual DbSet<PropertyDao> Properties { get; set; }
+        public virtual DbSet<LocationDao> Locations { get; set; }
 
         public PropertyContext()
         {
