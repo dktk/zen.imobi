@@ -7,10 +7,10 @@ namespace Base.Data
     public abstract class Repository<TContext, TEntity> :
             IRepository<TEntity>
         where TEntity : class
-        where TContext : DbContext, new()
+        where TContext : DbContext
     {
 
-        private TContext _entities = new TContext();
+        private TContext _entities = Activator.CreateInstance<TContext>();
         public TContext Context
         {
 

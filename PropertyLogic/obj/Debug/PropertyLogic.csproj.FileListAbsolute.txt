@@ -13,7 +13,5 @@ D:\projects\Zen.Imobi\PropertyLogic\bin\Debug\EntityFramework.xml
 D:\projects\Zen.Imobi\PropertyLogic\bin\Debug\PropertyLogic.dll.config
 D:\projects\Zen.Imobi\PropertyLogic\bin\Debug\EntityFramework.SqlServer.dll
 D:\projects\Zen.Imobi\PropertyLogic\bin\Debug\EntityFramework.SqlServer.xml
-D:\projects\Zen.Imobi\PropertyLogic\obj\Debug\PropertyLogic.Migrations.InitialCreate.resources
+D:\projects\Zen.Imobi\PropertyLogic\obj\Debug\PropertyLogic.Migrations.InitialCommit.resources
 D:\projects\Zen.Imobi\PropertyLogic\obj\Debug\PropertyLogic.csproj.GenerateResource.Cache
-D:\projects\Zen.Imobi\PropertyLogic\obj\Debug\PropertyLogic.Migrations.InitialCreate1.resources
-D:\projects\Zen.Imobi\PropertyLogic\obj\Debug\PropertyLogic.Migrations.AddPropertiesAndLocations.resources

@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System.Data.Common;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 
@@ -10,8 +10,15 @@ namespace PropertyLogic.Data
         public virtual DbSet<LocationDao> Locations { get; set; }
 
         public PropertyContext()
+            : this("DefaultConnection")
         {
 
+        }
+
+        public PropertyContext(DbConnection connection)
+            : base(connection, true)
+        {
+            Database.Initialize(true);    
         }
 
         public PropertyContext(string connectionString) : base(connectionString) { }
