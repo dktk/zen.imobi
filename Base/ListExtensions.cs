@@ -7,7 +7,12 @@ namespace Base
     {
         public static bool IsNotNullOrEmpty<T>(this IEnumerable<T> collection)
         {
-            return collection != null && collection.Any();
+            return !collection.IsNullOrEmpty();
+        }
+
+        public static bool IsNullOrEmpty<T>(this IEnumerable<T> collection)
+        {
+            return collection == null || !collection.Any();
         }
     }
 }

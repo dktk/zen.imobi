@@ -49,6 +49,10 @@ namespace PropertyLogic
                 UserId = userId
             });
 
+            _propertiesRepository.Save();
+
+
+
             return propertyId;
         }
     }

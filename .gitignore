@@ -1,0 +1,14 @@
+base/bin
+base/obj/
+base.tests/bin
+base.tests/obj
+base,tests/bin
+base,tests/obj
+base.domain/bin
+base.domain/obj
+property.logic/bin
+property.logic/obj
+zen.imobi.models/bin
+zen.imobi.models/obj
+zen.imobi.tests/bin
+zen.imobi.tests/obj

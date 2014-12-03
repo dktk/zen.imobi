@@ -7,7 +7,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Base.Tests</RootNamespace>
-    <AssemblyName>Base,Tests</AssemblyName>
+    <AssemblyName>Base.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -113,6 +113,8 @@
   </Choose>
   <ItemGroup>
     <Compile Include="GuardsTest.cs" />
+    <Compile Include="LIstExtensionTests.cs" />
+    <Compile Include="ObjectExtensions.cs" />
     <Compile Include="StringExtensionTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

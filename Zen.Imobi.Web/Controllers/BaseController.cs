@@ -1,5 +1,5 @@
-﻿using AutoMapper;
-using Base;
+﻿using Base;
+using System;
 using System.Web.Mvc;
 
 namespace Zen.Imobi.Web.Controllers
@@ -13,6 +13,11 @@ namespace Zen.Imobi.Web.Controllers
             Guard.AgainstNullOrEmpty(identityProvider);
 
             _identityProvider = identityProvider;
+        }
+
+        protected Guid UserId()
+        {
+            return _identityProvider.GetUserId();
         }
     }
 }

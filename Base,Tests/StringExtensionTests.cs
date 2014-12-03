@@ -1,28 +1,26 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Base;
+﻿using Ploeh.AutoFixture.Xunit;
+using Xunit;
+using Xunit.Extensions;
 
 namespace Base.Tests
 {
-    [TestClass]
     public class StringExtensionTests
     {
-        [TestMethod]
+        [Fact]
         public void IsNullOrEmpty()
         {
             string nullString = null;
             string emptyString = string.Empty;
 
-            Assert.IsTrue(nullString.IsNullOrEmpty());
-            Assert.IsTrue(emptyString.IsNullOrEmpty());
+            Assert.True(nullString.IsNullOrEmpty());
+            Assert.True(emptyString.IsNullOrEmpty());
         }
 
-        [TestMethod]
-        public void IsNotNullOrEmpty()
+        [Theory]
+        [AutoData]
+        public void IsNotNullOrEmpty(string value)
         {
-            string value = "string";
-
-            Assert.IsTrue(value.IsNotNullOrEmpty());
+            Assert.True(value.IsNotNullOrEmpty());
         }
     }
 }

@@ -15,6 +15,7 @@ namespace Zen.Imobi.Web
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AutoMapperConfig.Start();
+            EventMappings.Configure();
         }
     }
 }

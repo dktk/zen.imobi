@@ -29,7 +29,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Infrastructure", "1.Infra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base", "Base\Base.csproj", "{FA39996D-37E4-46C6-9E5C-2895A034A72B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base,Tests", "Base,Tests\Base,Tests.csproj", "{5A2A63FE-6B21-412B-B0AA-6A982397B87C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.Tests", "Base,Tests\Base.Tests.csproj", "{5A2A63FE-6B21-412B-B0AA-6A982397B87C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zen.Imobi.Models", "Zen.Imobi.Models\Zen.Imobi.Models.csproj", "{75DAD35E-EB93-4A89-A47B-4353940E1600}"
 EndProject

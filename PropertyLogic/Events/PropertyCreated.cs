@@ -1,14 +1,17 @@
-﻿using Base.Domain;
+﻿using Base;
+using Base.Domain;
+using System;
 
 namespace PropertyLogic.Events
 {
     public class PropertyCreated : Event
     {
-        public long PropertyId { get; private set; }
+        public Guid PropertyId { get; private set; }
 
-        public PropertyCreated(long propertyId)
+        public PropertyCreated(Guid userId, Guid propertyId)
+            : base(userId)
         {
-            PropertyId = propertyId;
+            Guard.AgainstNullOrEmpty(propertyId);
         }
     }
 }

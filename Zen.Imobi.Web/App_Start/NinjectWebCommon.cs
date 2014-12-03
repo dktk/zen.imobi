@@ -5,6 +5,7 @@ namespace Zen.Imobi.Web.App_Start
 {
     using Base;
     using Base.Domain;
+    using Base.Time;
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
     using Ninject;
     using Ninject.Web.Common;
@@ -15,7 +16,7 @@ namespace Zen.Imobi.Web.App_Start
     public static class NinjectWebCommon 
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
-
+        
         /// <summary>
         /// Starts the application
         /// </summary>
@@ -23,7 +24,7 @@ namespace Zen.Imobi.Web.App_Start
         {
             DynamicModuleUtility.RegisterModule(typeof(OnePerRequestHttpModule));
             DynamicModuleUtility.RegisterModule(typeof(NinjectHttpModule));
-            bootstrapper.Initialize(CreateKernel);
+            bootstrapper.Initialize(CreateKernel);            
         }
         
         /// <summary>
@@ -33,7 +34,7 @@ namespace Zen.Imobi.Web.App_Start
         {
             bootstrapper.ShutDown();
         }
-        
+      
         /// <summary>
         /// Creates the kernel that will manage your application.
         /// </summary>
@@ -67,6 +68,7 @@ namespace Zen.Imobi.Web.App_Start
             kernel.Bind<PropertyLogic.Property>().To<PropertyLogic.Property>();
 
             kernel.Bind<IIdentityProvider>().To<IdentityProvider>();
+            kernel.Bind<ITimeResolver>().To<TimeResolver>();
         }        
     }
 }
