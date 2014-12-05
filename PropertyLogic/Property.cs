@@ -50,9 +50,7 @@ namespace PropertyLogic
             });
 
             _propertiesRepository.Save();
-
-
-
+            
             return propertyId;
         }
     }
