@@ -1,7 +1,0 @@
-D:\projects\Zen.Imobi\Zen.Imobi.Resources\bin\Debug\Zen.Imobi.Resources.dll
-D:\projects\Zen.Imobi\Zen.Imobi.Resources\bin\Debug\Zen.Imobi.Resources.pdb
-D:\projects\Zen.Imobi\Zen.Imobi.Resources\obj\Debug\Zen.Imobi.Resources.Property.resources
-D:\projects\Zen.Imobi\Zen.Imobi.Resources\obj\Debug\Zen.Imobi.Resources.csproj.GenerateResource.Cache
-D:\projects\Zen.Imobi\Zen.Imobi.Resources\obj\Debug\Zen.Imobi.Resources.dll
-D:\projects\Zen.Imobi\Zen.Imobi.Resources\obj\Debug\Zen.Imobi.Resources.pdb
-D:\projects\Zen.Imobi\Zen.Imobi.Resources\obj\Debug\Zen.Imobi.Resources.csprojResolveAssemblyReference.cache
