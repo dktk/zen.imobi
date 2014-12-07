@@ -1,10 +1,8 @@
 ﻿using AutoMapper;
 using Base;
+using Base.Domain;
+using Ninject;
 using PropertyLogic;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using Zen.Imobi.Models.Property;
 
@@ -14,8 +12,8 @@ namespace Zen.Imobi.Web.Controllers
     {
         private readonly PropertyLogic.Property _property;
 
-        public PropertyController(PropertyLogic.Property property, IIdentityProvider identityProvider)
-            : base(identityProvider)
+        public PropertyController(PropertyLogic.Property property, IIdentityProvider identityProvider, IEventBus eventBus)  
+            : base(identityProvider, eventBus)
         {
             _property = property;
         }

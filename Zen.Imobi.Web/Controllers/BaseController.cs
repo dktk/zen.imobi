@@ -1,4 +1,5 @@
 ﻿using Base;
+using Base.Domain;
 using System;
 using System.Web.Mvc;
 
@@ -8,11 +9,15 @@ namespace Zen.Imobi.Web.Controllers
     {
         protected readonly IIdentityProvider _identityProvider;
 
-        public BaseController(IIdentityProvider identityProvider)
+        protected readonly IEventBus _eventBus;
+
+        public BaseController(IIdentityProvider identityProvider, IEventBus eventBus)
         {
             Guard.AgainstNullOrEmpty(identityProvider);
+            Guard.AgainstNullOrEmpty(eventBus);
 
             _identityProvider = identityProvider;
+            _eventBus = eventBus;
         }
 
         protected Guid UserId()

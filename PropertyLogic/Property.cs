@@ -1,6 +1,7 @@
 ﻿using Base;
 using Base.Domain;
 using PropertyLogic.Data;
+using PropertyLogic.Events;
 using System;
 using System.Diagnostics.Contracts;
 
@@ -9,6 +10,7 @@ namespace PropertyLogic
     public class Property : Entity
     {
         private readonly IPropertiesRepository _propertiesRepository;
+        private readonly IEventBus _eventBus;
 
         public PropertyStatus Status { get; set; }
         public string Description { get; set; }
@@ -19,11 +21,13 @@ namespace PropertyLogic
             Contract.Invariant(Description.IsNotNullOrEmpty());
         }
 
-        public Property(IPropertiesRepository propertiesRepository)
+        public Property(IPropertiesRepository propertiesRepository, IEventBus eventBus)
         {
             Guard.AgainstNullOrEmpty(propertiesRepository);
-            
+            Guard.AgainstNullOrEmpty(eventBus);
+
             _propertiesRepository = propertiesRepository;
+            _eventBus = eventBus;
         }
 
         public Guid Create(Guid userId, Location location, string description)
@@ -50,7 +54,9 @@ namespace PropertyLogic
             });
 
             _propertiesRepository.Save();
-            
+
+            _eventBus.Publish(new PropertyCreated(userId, propertyId));
+
             return propertyId;
         }
     }

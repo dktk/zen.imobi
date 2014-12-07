@@ -12,6 +12,8 @@ namespace PropertyLogic.Events
             : base(userId)
         {
             Guard.AgainstNullOrEmpty(propertyId);
+
+            PropertyId = propertyId;
         }
     }
 }

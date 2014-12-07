@@ -37,6 +37,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zen.Imobi.Resources", "Zen.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.Tests", "Base.Tests\Base.Tests.csproj", "{5A2A63FE-6B21-412B-B0AA-6A982397B87C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB Scripts", "DB Scripts", "{D42EA5C6-66EC-446D-8E7B-E48EDBABE69C}"
+	ProjectSection(SolutionItems) = preProject
+		Elmah-1.2-db.sql = Elmah-1.2-db.sql
+		log4net.sql = log4net.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -88,5 +94,6 @@ Global
 		{75DAD35E-EB93-4A89-A47B-4353940E1600} = {647F65F3-EA6F-4AD4-8304-48460BE1E2B9}
 		{98219EC7-1506-466B-A609-5CA24A3357EB} = {647F65F3-EA6F-4AD4-8304-48460BE1E2B9}
 		{5A2A63FE-6B21-412B-B0AA-6A982397B87C} = {33281271-7A54-4150-816E-33A8A8D6FB20}
+		{D42EA5C6-66EC-446D-8E7B-E48EDBABE69C} = {057F3946-37BA-4280-9897-2DCC75ABCB3E}
 	EndGlobalSection
 EndGlobal

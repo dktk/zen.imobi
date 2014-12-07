@@ -1,7 +1,7 @@
-[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(Zen.Imobi.Web.App_Start.NinjectWebCommon), "Start")]
-[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(Zen.Imobi.Web.App_Start.NinjectWebCommon), "Stop")]
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(Zen.Imobi.Web.NinjectWebCommon), "Start")]
+[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(Zen.Imobi.Web.NinjectWebCommon), "Stop")]
 
-namespace Zen.Imobi.Web.App_Start
+namespace Zen.Imobi.Web
 {
     using Base;
     using Base.Domain;
@@ -16,7 +16,12 @@ namespace Zen.Imobi.Web.App_Start
     public static class NinjectWebCommon 
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
-        
+        public static IKernel Kernel
+        {
+            get;
+            private set;
+        }
+
         /// <summary>
         /// Starts the application
         /// </summary>
@@ -24,7 +29,10 @@ namespace Zen.Imobi.Web.App_Start
         {
             DynamicModuleUtility.RegisterModule(typeof(OnePerRequestHttpModule));
             DynamicModuleUtility.RegisterModule(typeof(NinjectHttpModule));
-            bootstrapper.Initialize(CreateKernel);            
+            
+            Kernel = CreateKernel();
+
+            bootstrapper.Initialize(() => Kernel);            
         }
         
         /// <summary>
@@ -69,6 +77,8 @@ namespace Zen.Imobi.Web.App_Start
 
             kernel.Bind<IIdentityProvider>().To<IdentityProvider>();
             kernel.Bind<ITimeResolver>().To<TimeResolver>();
+            
+            kernel.Bind<IEventBus>().To<EventBus>();
         }        
     }
 }

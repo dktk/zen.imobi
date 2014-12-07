@@ -21,7 +21,7 @@ namespace Zen.Imobi.Web.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base(Config.ConnectionString, throwIfV1Schema: false)
         {
         }
 
