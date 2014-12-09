@@ -6,7 +6,13 @@ namespace PropertyLogic.Events
 {
     public class EventsContext : BaseContext
     {
-        // todo: this needs to map to table events.PropertyCreated
         public virtual DbSet<PropertyCreated> PropertyCreated { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<PropertyCreated>().ToTable("events.PropertyCreated");
+        }
     }
 }
