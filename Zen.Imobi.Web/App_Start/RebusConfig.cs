@@ -34,12 +34,4 @@ namespace Zen.Imobi.Web
             bus.Subscribe<PropertyCreated>();
         }
     }
-
-    public class ImportantThingHappenedHandler : IHandleMessages<PropertyCreated>
-    {
-        public void Handle(PropertyCreated message)
-        {
-           
-        }
-    }
 }

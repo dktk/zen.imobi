@@ -27,6 +27,8 @@ namespace Zen.Imobi.Web
 
             DependencyResolver.SetResolver(ninjectResolver);                        // MVC
             GlobalConfiguration.Configuration.DependencyResolver = ninjectResolver; // Web.API
+
+            BusMappings.Configure(NinjectWebCommon.Kernel);
         }
     }
 }

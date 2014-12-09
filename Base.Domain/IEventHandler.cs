@@ -1,7 +1,8 @@
 ﻿namespace Base.Domain
 {
-    public interface IEventHandler
+    public interface IEventHandler<TEvent>
+        where TEvent : Event
     {
-        void Trigger();
+        void Handle(TEvent @event);
     }
 }

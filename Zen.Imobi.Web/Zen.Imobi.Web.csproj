@@ -278,6 +278,7 @@
   <ItemGroup>
     <Compile Include="App_Start\AutoMapperConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\BusMappings.cs" />
     <Compile Include="App_Start\Config.cs" />
     <Compile Include="App_Start\DataMigrationInitializer.cs" />
     <Compile Include="App_Start\EventMappings.cs" />

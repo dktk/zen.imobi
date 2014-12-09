@@ -1,5 +1,6 @@
 ﻿using Base;
 using Base.Domain;
+using Rebus;
 using System;
 
 namespace PropertyLogic.Events

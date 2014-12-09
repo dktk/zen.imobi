@@ -1,24 +1,73 @@
-﻿using Rebus;
+﻿using Ninject;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Base.Domain
 {
     public class EventBus : IEventBus
     {
-        private readonly IBus _bus;
+        private readonly IKernel _kernel;
 
-        public EventBus(IBus bus)
+        private static readonly Dictionary<Type, List<Type>> _mappings = new Dictionary<Type, List<Type>>();
+        
+        public EventBus(IKernel kernel)
         {
-            Guard.AgainstNullOrEmpty(bus);
+            Guard.AgainstNullOrEmpty(kernel);
 
-            _bus = bus;
+            _kernel = kernel;
         }
 
-        public void Publish<TEvent>(TEvent @event)
-            where TEvent : Event
+        public void Publish<TEvent>(TEvent @event) where TEvent : Event
         {
-            Guard.AgainstNullOrEmpty(@event);
+            var eventType = typeof(TEvent);
 
-            _bus.Publish(@event);            
+            var eventHandlerTypes = _mappings.FirstOrDefault(map => map.Key == eventType).Value;
+
+            eventHandlerTypes.Match<List<Type>, InvalidOperationException>(
+                    _ => eventHandlerTypes.IsNullOrEmpty(),
+                    "There is no event handler mapped to: " + eventType.FullName,
+                    _ =>
+                    {
+                        foreach (var eventHandlerType in _)
+                        {
+                            TriggerEventHandler(eventHandlerType, @event);
+                        }
+                    }
+                );
+        }
+
+        private void TriggerEventHandler<TEvent>(Type eventHandlerType, TEvent @event)
+            where TEvent: Event
+        {
+            var handler = _kernel.TryGet(eventHandlerType);
+
+            eventHandlerType.Match<Type, InvalidOperationException>(
+                _ => _.IsNull(),
+                "Can not resolve handler: " + eventHandlerType.FullName,
+                _ =>
+                {
+                    var instance = _kernel.TryGet(_) as IEventHandler<TEvent>;
+
+                    instance.Handle(@event);
+                });
+        }
+
+        public void Register<TEvent, TEventHandler>()
+            where TEvent : Event
+            where TEventHandler : class, IEventHandler<TEvent>
+        {
+            var eventType = typeof(TEvent);
+            var eventHandlers = _mappings.GetOrAdd(eventType);
+
+            if (eventHandlers == null)
+            {
+                eventHandlers = new List<Type>();
+
+                _mappings[eventType] = eventHandlers;
+            }
+
+            eventHandlers.Add(typeof(TEventHandler));
         }
     }
 }
