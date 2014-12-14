@@ -281,10 +281,8 @@
     <Compile Include="App_Start\BusMappings.cs" />
     <Compile Include="App_Start\Config.cs" />
     <Compile Include="App_Start\DataMigrationInitializer.cs" />
-    <Compile Include="App_Start\EventMappings.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
-    <Compile Include="App_Start\NinjectResolver.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RebusConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -335,6 +333,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\zen.base.css" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

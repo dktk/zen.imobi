@@ -30,7 +30,7 @@ namespace Base.Tests
             var successResult = 0;
 
             value.Match(
-                _ => { return value == "abc"; },
+                _ => { return value != "abc"; },
                 _ => { errorResult = 1; },
                 _ => { successResult = 1; });
 
@@ -46,7 +46,7 @@ namespace Base.Tests
             var successResult = 0;
 
             value.Match(
-                _ => { return value != "abc"; },
+                _ => { return value == "abc"; },
                 _ => { errorResult = 1; },
                 _ => { successResult = 1; });
 

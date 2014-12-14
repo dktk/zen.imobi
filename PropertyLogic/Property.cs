@@ -1,9 +1,11 @@
-﻿using Base;
+﻿using AutoMapper;
+using Base;
 using Base.Domain;
 using PropertyLogic.Data;
 using PropertyLogic.Events;
 using System;
 using System.Diagnostics.Contracts;
+using System.Linq;
 
 namespace PropertyLogic
 {
@@ -58,6 +60,36 @@ namespace PropertyLogic
             _eventBus.Publish(new PropertyCreated(userId, propertyId));
 
             return propertyId;
+        }
+
+        public TProjection GetOwnedProperty<TProjection>(Guid propertyId, Guid userId)
+            where TProjection : class, new()
+        {
+            var propertyDao = _propertiesRepository
+                        .FindBy(p => p.Id == propertyId && p.UserId == userId, new [] { "Location" })
+                        .FirstOrDefault();
+
+            TProjection result = default(TProjection);
+
+            propertyDao
+                .Match<PropertyDao, PropertyException>(
+                    _ => _.IsNull(),
+
+                    string.Format("There is no property {0} owned by user {1}", propertyId, userId),
+                
+                    _ =>
+                    {
+                        result = Mapper.Map<TProjection>(_);
+                    });
+
+            return result;
+        }
+
+        public void Rent(Guid propertyId, Guid userId)
+        {
+            _propertiesRepository.RentProperty(propertyId, userId);
+
+            _eventBus.Publish(new PropertyRented(userId, propertyId));
         }
     }
 }

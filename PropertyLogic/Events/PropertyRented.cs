@@ -2,11 +2,12 @@
 
 namespace PropertyLogic.Events
 {
-    public class PropertyCreated : PropertyEvent
+    public class PropertyRented : PropertyEvent
     {
-        public PropertyCreated(Guid userId, Guid propertyId)
+        public PropertyRented(Guid userId, Guid propertyId)
             : base(userId, propertyId)
         {
+
         }
     }
 }

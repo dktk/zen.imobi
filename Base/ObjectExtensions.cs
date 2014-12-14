@@ -4,6 +4,11 @@ namespace Base
 {
     public static class ObjectExtensions
     {
+        public static bool IsNull(this Guid obj)
+        {
+            return obj == Guid.Empty;
+        }
+
         public static bool IsNull(this object obj)
         {
             return obj == null;
@@ -40,7 +45,7 @@ namespace Base
             instance
                 .Match(
                     errorPredicate,
-                    onError: _ => Guard.Throw<TException>(message),
+                    onError: _ => Throw.FormattedException<TException>(message),
                     onSuccess: _ => onSuccess(_)
                 );
         }

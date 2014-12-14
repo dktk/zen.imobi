@@ -10,5 +10,6 @@ namespace PropertyLogic.Data
         public string Description { get; set; }
         public byte Status { get; set; }
         public Guid UserId { get; set; }
+        public LocationDao Location { get; set; }
     }
 }

@@ -11,6 +11,7 @@ namespace Zen.Imobi.Web
         {
             CreateMapping<CreatePropertyModel, Property>();
             CreateMapping<CreatePropertyModel, Location>();
+            CreateMapping<PropertyDao, CreatePropertyModel>();
         }
 
         private static void CreateMapping<TSource, TDestionation>()

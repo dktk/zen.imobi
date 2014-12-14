@@ -3,6 +3,7 @@ using Base;
 using Base.Domain;
 using Ninject;
 using PropertyLogic;
+using System;
 using System.Web.Mvc;
 using Zen.Imobi.Models.Property;
 
@@ -30,9 +31,10 @@ namespace Zen.Imobi.Web.Controllers
         {
             return View(CreatePropertyModel.Empty);
         }
-
+                
         [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         // POST: Property/Create
         public ActionResult Create(CreatePropertyModel model)
         {
@@ -40,10 +42,46 @@ namespace Zen.Imobi.Web.Controllers
             {
                 var location = Mapper.Map<Location>(model);
 
-                _property.Create(_identityProvider.GetUserId(), location, model.Description);
+                var propertyId = _property.Create(UserId(), location, model.Description);
+
+                return RedirectToAction("Edit", new { propertyId = propertyId });
+            }
+            
+            ViewBag.ModelValidationError = Zen.Imobi.Resources.Property.ViewCreate_ModelValidationError;
+            
+            return View(model);
+        }
+
+        [Authorize]
+        public ActionResult Edit(Guid propertyId)
+        {
+            Guard.AgainstNullOrEmpty(propertyId);
+
+            var propertyModel = _property.GetOwnedProperty<CreatePropertyModel>(propertyId, UserId());
+
+            return View("Create", propertyModel);
+        }
+
+        [Authorize]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Rent(RentPropertyModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var dbProperty = _property.GetOwnedProperty<RentPropertyModel>(model.PropertyId, UserId());
+
+                _property.Rent(model.PropertyId, UserId());
+
+                // TODO: remmeber to display this in the VIEW
+                ViewBag.CongratulationForRentalMessage = Zen.Imobi.Resources.Property.CongratulationForRentalMessage;
+
+                // todo:
+                // Ask for feedback on how the interaction went
             }
 
-            return View(CreatePropertyModel.Empty);
+            // todo: set an error message here since the posted model is not ok
+            return RedirectToAction("Index", new { id = model.PropertyId });
         }
     }
 }

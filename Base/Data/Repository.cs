@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.SqlClient;
 using System.Linq;
+using System.Linq.Expressions;
 
 namespace Base.Data
 {
@@ -9,7 +12,6 @@ namespace Base.Data
         where TEntity : class
         where TContext : DbContext
     {
-
         private TContext _entities = Activator.CreateInstance<TContext>();
         public TContext Context
         {
@@ -25,10 +27,19 @@ namespace Base.Data
             return query;
         }
 
-        public IQueryable<TEntity> FindBy(System.Linq.Expressions.Expression<Func<TEntity, bool>> predicate)
+        public IQueryable<TEntity> FindBy(Expression<Func<TEntity, bool>> predicate, IEnumerable<string> includedPaths = null)
         {
+            IQueryable<TEntity> query = _entities.Set<TEntity>();
 
-            IQueryable<TEntity> query = _entities.Set<TEntity>().Where(predicate);
+            if (includedPaths.IsNotNull())
+            {
+                foreach (var includePath in includedPaths)
+                {
+                    query = query.Include(includePath);
+                }
+            }
+
+            query = query.Where(predicate);
             
             return query;
         }
@@ -51,6 +62,13 @@ namespace Base.Data
         public virtual void Save()
         {
             _entities.SaveChanges();
+        }
+
+        public int ExecuteQuery(string storeProcedureName, IEnumerable<SqlParameter> sqlParameters)
+        {
+            return 
+                new SqlCaller(_entities.Database.Connection.ConnectionString)
+                    .ExecuteNonQuery(storeProcedureName, sqlParameters);
         }
     }
 }

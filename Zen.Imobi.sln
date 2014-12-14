@@ -43,6 +43,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB Scripts", "DB Scripts", 
 		log4net.sql = log4net.sql
 	EndProjectSection
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Zen.Imobi.Db", "Zen.Imobi.Db\Zen.Imobi.Db.sqlproj", "{D605D021-9CD0-40B1-9BE4-ADA743F14574}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,12 @@ Global
 		{5A2A63FE-6B21-412B-B0AA-6A982397B87C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A2A63FE-6B21-412B-B0AA-6A982397B87C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A2A63FE-6B21-412B-B0AA-6A982397B87C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D605D021-9CD0-40B1-9BE4-ADA743F14574}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D605D021-9CD0-40B1-9BE4-ADA743F14574}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D605D021-9CD0-40B1-9BE4-ADA743F14574}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D605D021-9CD0-40B1-9BE4-ADA743F14574}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D605D021-9CD0-40B1-9BE4-ADA743F14574}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D605D021-9CD0-40B1-9BE4-ADA743F14574}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,5 +103,6 @@ Global
 		{98219EC7-1506-466B-A609-5CA24A3357EB} = {647F65F3-EA6F-4AD4-8304-48460BE1E2B9}
 		{5A2A63FE-6B21-412B-B0AA-6A982397B87C} = {33281271-7A54-4150-816E-33A8A8D6FB20}
 		{D42EA5C6-66EC-446D-8E7B-E48EDBABE69C} = {057F3946-37BA-4280-9897-2DCC75ABCB3E}
+		{D605D021-9CD0-40B1-9BE4-ADA743F14574} = {33281271-7A54-4150-816E-33A8A8D6FB20}
 	EndGlobalSection
 EndGlobal

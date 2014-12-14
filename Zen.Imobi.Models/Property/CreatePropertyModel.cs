@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using resx = Zen.Imobi.Resources.Property;
 
 namespace Zen.Imobi.Models.Property
@@ -12,8 +13,10 @@ namespace Zen.Imobi.Models.Property
                 Street = string.Empty,
                 Number = string.Empty,
                 YearOfConstruction = string.Empty,
-                PropertyStatus = 0
+                Status = 0
             };
+
+        public Guid Id { get; set; }
 
         [Display(ResourceType = typeof(resx), Name = "Description")]
         public string Description { get; set; }
@@ -37,6 +40,6 @@ namespace Zen.Imobi.Models.Property
         [Display(ResourceType = typeof(resx), Name = "SouthernOrientation")]
         public bool SouthernOrientation { get; set; }
 
-        public int PropertyStatus { get; set; }
+        public int Status { get; set; }
     }
 }

@@ -117,31 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="City" xml:space="preserve">
-    <value>City</value>
+  <data name="Target" xml:space="preserve">
+    <value>H4sIAAAAAAAEAO1Y227bOBB9X2D/QdBzaibtYtEN5BapkxTBNkkReftOS2OXWIpUeQnib+tDP6m/sEPrakqKrSRb7KKBXyxq5syFhzNDff/6LXp7l/HgFpRmUkzDo8lhGIBIZMrEahpas3zxOnz75tdforM0uws+VXKvnBxqCj0NPxuTHxOik8+QUT3JWKKklkszSWRGaCrJy8PDP8jREQGECBErCKIbKwzLYPOAjzMpEsiNpfxSpsB1uY5v4g1qcEUz0DlNYBp+VDIHZdYf5Iolk7NbEEaHwQlnFH2JgS/DgAohDTXo6fFfGmKjpFjFOS5QPl/ngHJLyjWUERw34vsGc/jSBUMaxQoqsdrIbCTg0asyO8RXf1COwzp7mL8zzLNZu6g3OWzSN1NADaRh4Ns8nnHl5PszPfH0D4ItqYOaIsgk9zsIZpYbq2AqwBpFOSrYBWfJn7Cey79BTIXlvO0yOo3vthZwqbJyA8sykAv0nWzrEV+xVmvpFLFdCPP7b2FwhcbpgkPNiFYeYiMVvAcBygX6kRoDSjgM2OS0Y92zVT02Nt9blvaYvB/mFI1XAO7/HI/NaBA8BWqUHxFpiLMXnW4wKY9gU6H+TKafkExY+w1lmJgSvmCGW4U700MoNF9yCuuiURa8/S5QYzBDBa9xpugXfknrxD+EWHF+ELAS6EtGHXbT60jR7KqmSAa6YnRJ8xzbc6tLlitBXLTI2Yt4fOfICgyS6J4GUntbW0I+0xV4b9E0enrOlDZIL7qgjgqzNOuIbW/yQLorW/376B/qZhcqPfd/W/e+TuYDNmk9x0gzVNkEDbV7O13aYMQJ5VT1lI6Z5DYTQ+XnPu12MWijtNf3RytqQhunWNkfoSoIbYxqrYsSES+t/kaSzk56hdknyCj6lGfyydjTjzeCPEMAz9z5wdzpVGZfpLZeV2ivEkdlVdx9iemUyUIkdAPQLUtdiYzX2kA2cQKT+AufcYbxNgKXVLAlaFPMPSFW8dfeLei/cyMhWqd83LXkh89wC7ZiLr87B7WR01J3crOCfbHANoBLBupRU1yK/83jp7iRPj30evC8q//fXfXn9O6k9+RzeFEUpyGUH3nmhev/+ry+w+4jx/puk4hI+3tYdAqarRoI93VMQOKqbwNayVyIpaz8wojbHlUiHkUuwVDkFz1RSAqaGHydgNbYxsLgE+XWXcGyBaQX4tqa3JoTrSFb8K0rakTut7+5u2z7HF3n7kk/RQjoJnNH5Fq8s4yntd/nPZwegHDsLesBehUbVxdW6xrpSoo9gcr0nUIOwh20OWQ5RzB9LWJ6Cw/xDQ/xB1jRZF31+mGQ3RuxnfbolNGVopkuMRp9942XuI+8b/4B0er5mRYWAAA=</value>
   </data>
-  <data name="CongratulationForRentalMessage" xml:space="preserve">
-    <value>Congratulations on a job well done in renting your property.</value>
-  </data>
-  <data name="Description" xml:space="preserve">
-    <value>Description</value>
-  </data>
-  <data name="Number" xml:space="preserve">
-    <value>Number</value>
-  </data>
-  <data name="SouthernOrientation" xml:space="preserve">
-    <value>Southern orientation</value>
-  </data>
-  <data name="Street" xml:space="preserve">
-    <value>Street</value>
-  </data>
-  <data name="ViewCreate_ModelValidationError" xml:space="preserve">
-    <value>An error occurred while trying to create your property.</value>
-  </data>
-  <data name="ViewCreate_Title" xml:space="preserve">
-    <value>Setup your property</value>
-  </data>
-  <data name="YearOfConstruction" xml:space="preserve">
-    <value>Year of construction</value>
+  <data name="DefaultSchema" xml:space="preserve">
+    <value>dbo</value>
   </data>
 </root>

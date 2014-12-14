@@ -1,10 +1,5 @@
 ﻿using Ploeh.AutoFixture.Xunit;
 using System;
-using System.Collections.Generic;
-using System.Diagnostics.Contracts;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 using Xunit.Extensions;
 
@@ -69,19 +64,6 @@ namespace Base.Tests
             {
                 var tester = new Tester(value);
             });
-        }
-
-        [Theory]
-        [InlineData("1, 2, {0}, 4", 1)]
-        public void Throw(string message, int arg)
-        {
-            var exception = Assert.Throws<InvalidOperationException>(() =>
-                {
-                    Guard.Throw<InvalidOperationException>(message, arg);
-                });
-
-            Assert.Equal(string.Format(message, arg), exception.Message);
-            Assert.IsType<InvalidOperationException>(exception);
         }
     }
 }

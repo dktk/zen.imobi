@@ -5,9 +5,9 @@ namespace PropertyLogic.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<PropertyLogic.Data.PropertyContext>
+    internal sealed class PropertyConfiguration : DbMigrationsConfiguration<PropertyLogic.Data.PropertyContext>
     {
-        public Configuration()
+        public PropertyConfiguration()
         {
             AutomaticMigrationsEnabled = false;
         }

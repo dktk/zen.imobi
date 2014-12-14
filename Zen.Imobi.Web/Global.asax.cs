@@ -19,12 +19,10 @@ namespace Zen.Imobi.Web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            
             AutoMapperConfig.Start();
-            EventMappings.Configure();
-            RebusConfig.Start(NinjectWebCommon.Kernel);
 
             var ninjectResolver = new NinjectDependencyResolver(NinjectWebCommon.Kernel);
-
             DependencyResolver.SetResolver(ninjectResolver);                        // MVC
             GlobalConfiguration.Configuration.DependencyResolver = ninjectResolver; // Web.API
 

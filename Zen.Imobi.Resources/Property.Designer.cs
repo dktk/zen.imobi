@@ -70,6 +70,15 @@ namespace Zen.Imobi.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Congratulations on a job well done in renting your property..
+        /// </summary>
+        public static string CongratulationForRentalMessage {
+            get {
+                return ResourceManager.GetString("CongratulationForRentalMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Description.
         /// </summary>
         public static string Description {
@@ -102,6 +111,24 @@ namespace Zen.Imobi.Resources {
         public static string Street {
             get {
                 return ResourceManager.GetString("Street", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error occurred while trying to create your property..
+        /// </summary>
+        public static string ViewCreate_ModelValidationError {
+            get {
+                return ResourceManager.GetString("ViewCreate_ModelValidationError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Setup your property.
+        /// </summary>
+        public static string ViewCreate_Title {
+            get {
+                return ResourceManager.GetString("ViewCreate_Title", resourceCulture);
             }
         }
         
