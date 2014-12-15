@@ -9,6 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zen.Imobi.Tests", "Zen.Imob
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.Solution Items", "0.Solution Items", "{057F3946-37BA-4280-9897-2DCC75ABCB3E}"
 	ProjectSection(SolutionItems) = preProject
+		migrations.txt = migrations.txt
 		C:\Users\calin\OneDrive\Documents\zen-imobi.html = C:\Users\calin\OneDrive\Documents\zen-imobi.html
 	EndProjectSection
 EndProject

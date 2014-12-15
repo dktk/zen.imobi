@@ -12,10 +12,17 @@ namespace Zen.Imobi.Web
             CreateMapping<CreatePropertyModel, Property>();
             CreateMapping<CreatePropertyModel, Location>();
             CreateMapping<PropertyDao, CreatePropertyModel>();
+            CreateMapping<PropertyDao, RentPropertyModel>();
+
+            CreateMapping<Location, LocationDao>();
+            CreateMapping<CreatePropertyModel, Location>();
         }
 
         private static void CreateMapping<TSource, TDestionation>()
         {
+            var sourceType = typeof(TSource);
+            var destinationType = typeof(TDestionation);
+
             Mapper.CreateMap<TSource, TDestionation>();
             Mapper.CreateMap<TDestionation, TSource>();
         }

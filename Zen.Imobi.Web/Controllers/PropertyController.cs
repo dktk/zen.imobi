@@ -43,7 +43,7 @@ namespace Zen.Imobi.Web.Controllers
                 var location = Mapper.Map<Location>(model);
 
                 var propertyId = _property.Create(UserId(), location, model.Description);
-
+                
                 return RedirectToAction("Edit", new { propertyId = propertyId });
             }
             
@@ -65,23 +65,25 @@ namespace Zen.Imobi.Web.Controllers
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Rent(RentPropertyModel model)
+        public ActionResult Rent(Guid id)
         {
-            if (ModelState.IsValid)
+            if (id.IsNull())
             {
-                var dbProperty = _property.GetOwnedProperty<RentPropertyModel>(model.PropertyId, UserId());
-
-                _property.Rent(model.PropertyId, UserId());
-
-                // TODO: remmeber to display this in the VIEW
-                ViewBag.CongratulationForRentalMessage = Zen.Imobi.Resources.Property.CongratulationForRentalMessage;
-
-                // todo:
-                // Ask for feedback on how the interaction went
+                Throw.Exception<ApplicationException>("The Id of the property is empty.");
             }
+            
+            var dbProperty = _property.GetOwnedProperty<RentPropertyModel>(id, UserId());
+
+            _property.Rent(id, UserId());
+
+            // TODO: remmeber to display this in the VIEW
+            ViewBag.CongratulationForRentalMessage = Zen.Imobi.Resources.Property.CongratulationForRentalMessage;
+
+            // todo:
+            // Ask for feedback on how the interaction went
 
             // todo: set an error message here since the posted model is not ok
-            return RedirectToAction("Index", new { id = model.PropertyId });
+            return RedirectToAction("Index", new { id = id });
         }
     }
 }

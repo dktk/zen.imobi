@@ -37,7 +37,7 @@ namespace PropertyLogic
             Guard.AgainstNullOrEmpty(description);
             Guard.AgainstNullOrEmpty(userId);
 
-            
+
             // todo: syntactic validation of the description
             // is it positive
             // does it contain enough meaning
@@ -47,8 +47,8 @@ namespace PropertyLogic
             var propertyId = Guid.NewGuid();
             _propertiesRepository.Add(new PropertyDao
             {
-                // todo: add location
-                
+                Location = Mapper.Map<LocationDao>(location),
+
                 Description = description,
                 Id = propertyId,
                 Status = (byte)PropertyStatus.Available,
@@ -62,11 +62,11 @@ namespace PropertyLogic
             return propertyId;
         }
 
-        public TProjection GetOwnedProperty<TProjection>(Guid propertyId, Guid userId)
+        public TProjection GetOwnedProperty<TProjection>(Guid propertyId, Guid userId, bool full = false)
             where TProjection : class, new()
         {
             var propertyDao = _propertiesRepository
-                        .FindBy(p => p.Id == propertyId && p.UserId == userId, new [] { "Location" })
+                        .FindBy(p => p.Id == propertyId && p.UserId == userId, new[] { "Location" })
                         .FirstOrDefault();
 
             TProjection result = default(TProjection);
@@ -76,7 +76,7 @@ namespace PropertyLogic
                     _ => _.IsNull(),
 
                     string.Format("There is no property {0} owned by user {1}", propertyId, userId),
-                
+
                     _ =>
                     {
                         result = Mapper.Map<TProjection>(_);

@@ -4,6 +4,9 @@ namespace Zen.Imobi.Models.Property
 {
     public class RentPropertyModel
     {
-        public Guid PropertyId { get; set; }
+        /// <summary>
+        /// The Property Id.
+        /// </summary>
+        public Guid Id { get; set; }
     }
 }
