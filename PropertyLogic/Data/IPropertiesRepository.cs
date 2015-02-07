@@ -6,6 +6,6 @@ namespace PropertyLogic.Data
 {
     public interface IPropertiesRepository : IRepository<PropertyDao>
     {
-        int RentProperty(Guid propertyId, Guid userId);
+        int ChangePropertyRentStatus(Guid propertyId, Guid userId, PropertyStatus propertyStatus);
     }
 }

@@ -114,6 +114,7 @@
     <Compile Include="Events\EventsContext.cs" />
     <Compile Include="Events\PropertyCreated.cs" />
     <Compile Include="Events\PropertyEvent.cs" />
+    <Compile Include="Events\PropertyOfferedForRent.cs" />
     <Compile Include="Events\PropertyRented.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="Data\PropertyDao.cs" />

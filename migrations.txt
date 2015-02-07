@@ -1,0 +1,7 @@
+Enable-Migrations -ContextTypeName EventsContext -MigrationsDirectory Migrations_Events
+Add-Migration -ConfigurationTypeName PropertyLogic.Migrations_Events.Configuration -Name 
+Update-Database -ConfigurationTypeName PropertyLogic.Migrations_Events.Configuration 
+
+Enable-Migrations -ContextTypeName PropertyContext -MigrationsDirectory Migrations_Property
+Add-Migration -ConfigurationTypeName PropertyLogic.Migrations_Property.Configuration -Name InitialPropertyPush
+Update-Database -ConfigurationTypeName PropertyLogic.Migrations_Property.Configuration 

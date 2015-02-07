@@ -129,6 +129,12 @@
   <data name="Number" xml:space="preserve">
     <value>Number</value>
   </data>
+  <data name="OfferPropertyForRent" xml:space="preserve">
+    <value>You can push this property for rental.</value>
+  </data>
+  <data name="PropertyRented" xml:space="preserve">
+    <value>This property is rented.</value>
+  </data>
   <data name="SouthernOrientation" xml:space="preserve">
     <value>Southern orientation</value>
   </data>

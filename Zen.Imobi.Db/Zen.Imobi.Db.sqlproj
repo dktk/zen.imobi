@@ -62,6 +62,6 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="_1stRunONLY\Messages.sql" />
-    <Build Include="SPs\RentProperty.sql" />
+    <Build Include="SPs\ChangePropertyRentStatus.sql" />
   </ItemGroup>
 </Project>

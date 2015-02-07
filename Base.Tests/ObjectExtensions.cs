@@ -1,5 +1,7 @@
 ﻿using Ploeh.AutoFixture.Xunit;
 using System;
+using System.Linq;
+using System.Collections.Generic;
 using Xunit;
 using Xunit.Extensions;
 
@@ -52,6 +54,27 @@ namespace Base.Tests
 
             Assert.Equal(0, errorResult);
             Assert.Equal(1, successResult);
+        }
+
+        [Theory]
+        [AutoData]
+        public void Match_OnCollectionInstance(string exceptionMessage)
+        {
+            var numberOfSuccessCalls = 0;
+
+            new [] { Guid.NewGuid(), Guid.NewGuid() }
+                .Match<IEnumerable<Guid>, ApplicationException>(
+                    _ => _.IsNull(),
+
+                    exceptionMessage,
+
+                    _ =>
+                    {
+                        numberOfSuccessCalls++;
+                    }
+                );
+
+            Assert.Equal(1, numberOfSuccessCalls);
         }
     }
 }

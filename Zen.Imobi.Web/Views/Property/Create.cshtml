@@ -17,30 +17,46 @@
     </div>
 }
 
+@if (ViewBag.CongratulationForRentalMessage != null)
+{
+    <!-- todo: this needs to be made nice ... -->
+    <div class="success">
+        @Html.Encode(ViewBag.CongratulationForRentalMessage)
+    </div>
+}
+
 @if (Model != CreatePropertyModel.Empty)
 {
-    using (Html.BeginForm("Rent", "Property"))
+    if (!Model.IsRented)
     {
-        @Html.AntiForgeryToken()
+        using (Html.BeginForm("Rent", "Property"))
+        {
+            @Html.AntiForgeryToken()
 
-        @Html.HiddenFor(model => model.Id)
-        
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Rent" class="btn btn-default" />
+            @Html.HiddenFor(model => model.Id)
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Rent" class="btn btn-default" />
+                </div>
             </div>
-        </div>    
+        }
+    }
+    else
+    {
+        <p>@Html.Encode(Resources.Property.PropertyRented)</p>
+        <p>@Html.ActionLink(Resources.Property.OfferPropertyForRent, "OfferForRent")</p>
     }
 }
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">        
+
+    <div class="form-horizontal">
         <hr />
         @Html.ValidationSummary(true, string.Empty, new { @class = "text-danger" })
-                
+
         <div class="form-group">
             @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -97,7 +113,7 @@
             </div>
         </div>
     </div>
-    
+
     @Html.HiddenFor(model => model.Status)
 }
 

@@ -41,8 +41,6 @@ namespace Base.Domain
         private void TriggerEventHandler<TEvent>(Type eventHandlerType, TEvent @event)
             where TEvent: Event
         {
-            var handler = _kernel.TryGet(eventHandlerType);
-
             eventHandlerType.Match<Type, InvalidOperationException>(
                 _ => _.IsNull(),
                 "Can not resolve handler: " + eventHandlerType.FullName,

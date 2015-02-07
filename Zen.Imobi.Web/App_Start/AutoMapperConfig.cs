@@ -1,6 +1,9 @@
 ﻿using AutoMapper;
 using PropertyLogic;
 using PropertyLogic.Data;
+using System;
+using System.Collections.Generic;
+using System.Linq.Expressions;
 using Zen.Imobi.Models.Property;
 
 namespace Zen.Imobi.Web
@@ -12,8 +15,9 @@ namespace Zen.Imobi.Web
             CreateMapping<CreatePropertyModel, Property>();
             CreateMapping<CreatePropertyModel, Location>();
             CreateMapping<PropertyDao, CreatePropertyModel>();
-            CreateMapping<PropertyDao, RentPropertyModel>();
 
+            CreateMapping<PropertyDao, RentPropertyModel>();
+            
             CreateMapping<Location, LocationDao>();
             CreateMapping<CreatePropertyModel, Location>();
         }

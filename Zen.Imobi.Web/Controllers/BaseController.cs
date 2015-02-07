@@ -1,6 +1,7 @@
 ﻿using Base;
 using Base.Domain;
 using System;
+using System.Diagnostics;
 using System.Web.Mvc;
 
 namespace Zen.Imobi.Web.Controllers
@@ -20,6 +21,7 @@ namespace Zen.Imobi.Web.Controllers
             _eventBus = eventBus;
         }
 
+        [DebuggerStepThrough]
         protected Guid UserId()
         {
             return _identityProvider.GetUserId();

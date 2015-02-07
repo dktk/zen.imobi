@@ -1,0 +1,990 @@
+2014-12-07 04:07:19,717 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection - Mapping assembly: PropertyLogic
+2014-12-07 04:07:19,760 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Data.IPropertiesRepository -> zen.imobi.input
+2014-12-07 04:07:19,762 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Data.LocationDao -> zen.imobi.input
+2014-12-07 04:07:19,764 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Data.PropertyContext -> zen.imobi.input
+2014-12-07 04:07:19,765 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.EventsHandlerSubscriber -> zen.imobi.input
+2014-12-07 04:07:19,766 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Events.PropertyCreated -> zen.imobi.input
+2014-12-07 04:07:19,767 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Location -> zen.imobi.input
+2014-12-07 04:07:19,768 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Data.PropertyDao -> zen.imobi.input
+2014-12-07 04:07:19,769 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Data.PropertiesRepository -> zen.imobi.input
+2014-12-07 04:07:19,771 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Migrations.InitialCommit -> zen.imobi.input
+2014-12-07 04:07:19,771 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Migrations.Configuration -> zen.imobi.input
+2014-12-07 04:07:19,772 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Property -> zen.imobi.input
+2014-12-07 04:07:19,773 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.PropertyStatus -> zen.imobi.input
+2014-12-07 04:07:19,774 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     <>f__AnonymousType0`7[<Id>j__TPar,<Country>j__TPar,<ZipCode>j__TPar,<Street>j__TPar,<City>j__TPar,<Latitude>j__TPar,<Longitude>j__TPar] -> zen.imobi.input
+2014-12-07 04:07:19,774 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     <>f__AnonymousType1`4[<Id>j__TPar,<Description>j__TPar,<Status>j__TPar,<UserId>j__TPar] -> zen.imobi.input
+2014-12-07 04:07:19,775 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     System.Diagnostics.Contracts.__ContractsRuntime -> zen.imobi.input
+2014-12-07 04:07:19,775 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     System.Diagnostics.Contracts.RuntimeContractsFlags -> zen.imobi.input
+2014-12-07 04:07:19,776 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     System.Diagnostics.Contracts.RuntimeContractsAttribute -> zen.imobi.input
+2014-12-07 04:07:19,776 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     System.Diagnostics.Contracts.__ContractsRuntime+ContractException -> zen.imobi.input
+2014-12-07 04:07:19,777 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     System.Diagnostics.Contracts.__ContractsRuntime+ContractException+ContractExceptionData -> zen.imobi.input
+2014-12-07 04:07:19,860 [1] INFO Rebus.Bus.RebusBus - Rebus bus 1 created
+2014-12-07 04:07:19,863 [1] INFO Rebus.Bus.RebusBus - Using external timeout manager with input queue 'rebus.timeout'
+2014-12-07 04:07:19,877 [1] INFO Rebus.Bus.RebusBus - Initializing bus with 1 workers
+2014-12-07 04:07:19,894 [1] INFO Rebus.Bus.Worker - Worker Rebus 1 worker 1 created and inner thread started
+2014-12-07 04:07:19,901 [1] INFO Rebus.Bus.Worker - Starting worker thread Rebus 1 worker 1
+2014-12-07 04:07:19,904 [1] INFO Rebus.Bus.RebusBus - Bus started
+2014-12-07 04:07:20,235 [Rebus 1 worker 1] INFO Rebus.Bus.SubscriptionMessageHandler - Saving: zen.imobi.input@MSI subscribed to PropertyLogic.Events.PropertyCreated
+2014-12-07 04:07:27,176 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\19 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:07:27,184 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\19 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:07:27,187 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\19 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:07:27,189 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\19 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:07:27,192 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\19 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:07:27,201 [Rebus 1 worker 1] ERROR Rebus.Bus.Worker - Handling message c1071bc9-6713-48a6-8955-afc56f3cf1d9\19 has failed the maximum number of times - details: 12/7/2014 4:07:27 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+
+12/7/2014 4:07:27 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+
+12/7/2014 4:07:27 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+
+12/7/2014 4:07:27 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+
+12/7/2014 4:07:27 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+2014-12-07 04:07:27,206 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - Message PropertyLogic.Events.PropertyCreated is forwarded to error queue
+2014-12-07 04:09:01,508 [285] INFO Rebus.Bus.Worker - Stopping worker thread Rebus 1 worker 1
+2014-12-07 04:09:01,517 [103] INFO Rebus.Bus.Worker - Disposing worker thread Rebus 1 worker 1
+2014-12-07 04:09:06,068 [103] INFO Rebus.Transports.Msmq.MsmqMessageQueue - Disposing message queue .\private$\zen.imobi.input
+2014-12-07 04:09:09,712 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection - Mapping assembly: PropertyLogic
+2014-12-07 04:09:09,818 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Data.IPropertiesRepository -> zen.imobi.input
+2014-12-07 04:09:09,821 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Data.LocationDao -> zen.imobi.input
+2014-12-07 04:09:09,822 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Data.PropertyContext -> zen.imobi.input
+2014-12-07 04:09:09,824 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.EventsHandlerSubscriber -> zen.imobi.input
+2014-12-07 04:09:09,825 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Events.PropertyCreated -> zen.imobi.input
+2014-12-07 04:09:09,826 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Location -> zen.imobi.input
+2014-12-07 04:09:09,826 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Data.PropertyDao -> zen.imobi.input
+2014-12-07 04:09:09,827 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Data.PropertiesRepository -> zen.imobi.input
+2014-12-07 04:09:09,828 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Migrations.InitialCommit -> zen.imobi.input
+2014-12-07 04:09:09,829 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Migrations.Configuration -> zen.imobi.input
+2014-12-07 04:09:09,830 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Property -> zen.imobi.input
+2014-12-07 04:09:09,831 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.PropertyStatus -> zen.imobi.input
+2014-12-07 04:09:09,833 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     <>f__AnonymousType0`7[<Id>j__TPar,<Country>j__TPar,<ZipCode>j__TPar,<Street>j__TPar,<City>j__TPar,<Latitude>j__TPar,<Longitude>j__TPar] -> zen.imobi.input
+2014-12-07 04:09:09,835 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     <>f__AnonymousType1`4[<Id>j__TPar,<Description>j__TPar,<Status>j__TPar,<UserId>j__TPar] -> zen.imobi.input
+2014-12-07 04:09:09,837 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     System.Diagnostics.Contracts.__ContractsRuntime -> zen.imobi.input
+2014-12-07 04:09:09,839 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     System.Diagnostics.Contracts.RuntimeContractsFlags -> zen.imobi.input
+2014-12-07 04:09:09,841 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     System.Diagnostics.Contracts.RuntimeContractsAttribute -> zen.imobi.input
+2014-12-07 04:09:09,842 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     System.Diagnostics.Contracts.__ContractsRuntime+ContractException -> zen.imobi.input
+2014-12-07 04:09:09,843 [1] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     System.Diagnostics.Contracts.__ContractsRuntime+ContractException+ContractExceptionData -> zen.imobi.input
+2014-12-07 04:09:10,019 [1] INFO Rebus.Bus.RebusBus - Rebus bus 1 created
+2014-12-07 04:09:10,022 [1] INFO Rebus.Bus.RebusBus - Using external timeout manager with input queue 'rebus.timeout'
+2014-12-07 04:09:10,046 [1] INFO Rebus.Bus.RebusBus - Initializing bus with 1 workers
+2014-12-07 04:09:10,073 [1] INFO Rebus.Bus.Worker - Worker Rebus 1 worker 1 created and inner thread started
+2014-12-07 04:09:10,082 [1] INFO Rebus.Bus.Worker - Starting worker thread Rebus 1 worker 1
+2014-12-07 04:09:10,084 [1] INFO Rebus.Bus.RebusBus - Bus started
+2014-12-07 04:09:10,912 [Rebus 1 worker 1] INFO Rebus.Bus.SubscriptionMessageHandler - Saving: zen.imobi.input@MSI subscribed to PropertyLogic.Events.PropertyCreated
+2014-12-07 04:09:22,179 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\25 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:09:22,186 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\25 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:09:22,192 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\25 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:09:22,199 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\25 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:09:22,211 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\25 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:09:22,221 [Rebus 1 worker 1] ERROR Rebus.Bus.Worker - Handling message c1071bc9-6713-48a6-8955-afc56f3cf1d9\25 has failed the maximum number of times - details: 12/7/2014 4:09:22 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+
+12/7/2014 4:09:22 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+
+12/7/2014 4:09:22 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+
+12/7/2014 4:09:22 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+
+12/7/2014 4:09:22 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+2014-12-07 04:09:22,228 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - Message PropertyLogic.Events.PropertyCreated is forwarded to error queue
+2014-12-07 04:09:54,875 [46] INFO Rebus.Bus.Worker - Stopping worker thread Rebus 1 worker 1
+2014-12-07 04:09:54,881 [274] INFO Rebus.Bus.Worker - Disposing worker thread Rebus 1 worker 1
+2014-12-07 04:09:55,170 [274] INFO Rebus.Transports.Msmq.MsmqMessageQueue - Disposing message queue .\private$\zen.imobi.input
+2014-12-07 04:10:06,685 [19] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection - Mapping assembly: PropertyLogic
+2014-12-07 04:10:06,751 [19] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Data.IPropertiesRepository -> zen.imobi.input
+2014-12-07 04:10:06,753 [19] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Data.LocationDao -> zen.imobi.input
+2014-12-07 04:10:06,754 [19] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Data.PropertyContext -> zen.imobi.input
+2014-12-07 04:10:06,754 [19] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.EventsHandlerSubscriber -> zen.imobi.input
+2014-12-07 04:10:06,755 [19] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Events.PropertyCreated -> zen.imobi.input
+2014-12-07 04:10:06,755 [19] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Location -> zen.imobi.input
+2014-12-07 04:10:06,757 [19] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Data.PropertyDao -> zen.imobi.input
+2014-12-07 04:10:06,758 [19] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Data.PropertiesRepository -> zen.imobi.input
+2014-12-07 04:10:06,759 [19] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Migrations.InitialCommit -> zen.imobi.input
+2014-12-07 04:10:06,760 [19] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Migrations.Configuration -> zen.imobi.input
+2014-12-07 04:10:06,761 [19] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Property -> zen.imobi.input
+2014-12-07 04:10:06,762 [19] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.PropertyStatus -> zen.imobi.input
+2014-12-07 04:10:06,766 [19] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     <>f__AnonymousType0`7[<Id>j__TPar,<Country>j__TPar,<ZipCode>j__TPar,<Street>j__TPar,<City>j__TPar,<Latitude>j__TPar,<Longitude>j__TPar] -> zen.imobi.input
+2014-12-07 04:10:06,768 [19] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     <>f__AnonymousType1`4[<Id>j__TPar,<Description>j__TPar,<Status>j__TPar,<UserId>j__TPar] -> zen.imobi.input
+2014-12-07 04:10:06,769 [19] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     System.Diagnostics.Contracts.__ContractsRuntime -> zen.imobi.input
+2014-12-07 04:10:06,770 [19] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     System.Diagnostics.Contracts.RuntimeContractsFlags -> zen.imobi.input
+2014-12-07 04:10:06,771 [19] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     System.Diagnostics.Contracts.RuntimeContractsAttribute -> zen.imobi.input
+2014-12-07 04:10:06,772 [19] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     System.Diagnostics.Contracts.__ContractsRuntime+ContractException -> zen.imobi.input
+2014-12-07 04:10:06,773 [19] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     System.Diagnostics.Contracts.__ContractsRuntime+ContractException+ContractExceptionData -> zen.imobi.input
+2014-12-07 04:10:06,934 [19] INFO Rebus.Bus.RebusBus - Rebus bus 1 created
+2014-12-07 04:10:06,936 [19] INFO Rebus.Bus.RebusBus - Using external timeout manager with input queue 'rebus.timeout'
+2014-12-07 04:10:06,958 [19] INFO Rebus.Bus.RebusBus - Initializing bus with 1 workers
+2014-12-07 04:10:06,978 [19] INFO Rebus.Bus.Worker - Worker Rebus 1 worker 1 created and inner thread started
+2014-12-07 04:10:06,990 [19] INFO Rebus.Bus.Worker - Starting worker thread Rebus 1 worker 1
+2014-12-07 04:10:06,992 [19] INFO Rebus.Bus.RebusBus - Bus started
+2014-12-07 04:10:07,754 [Rebus 1 worker 1] INFO Rebus.Bus.SubscriptionMessageHandler - Saving: zen.imobi.input@MSI subscribed to PropertyLogic.Events.PropertyCreated
+2014-12-07 04:10:24,463 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\31 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:10:24,472 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\31 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:10:24,475 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\31 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:10:24,479 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\31 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:10:24,486 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\31 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:10:24,491 [Rebus 1 worker 1] ERROR Rebus.Bus.Worker - Handling message c1071bc9-6713-48a6-8955-afc56f3cf1d9\31 has failed the maximum number of times - details: 12/7/2014 4:10:24 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+
+12/7/2014 4:10:24 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+
+12/7/2014 4:10:24 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+
+12/7/2014 4:10:24 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+
+12/7/2014 4:10:24 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+2014-12-07 04:10:24,526 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - Message PropertyLogic.Events.PropertyCreated is forwarded to error queue
+2014-12-07 04:19:22,459 [282] INFO Rebus.Bus.Worker - Stopping worker thread Rebus 1 worker 1
+2014-12-07 04:19:22,463 [270] INFO Rebus.Bus.Worker - Disposing worker thread Rebus 1 worker 1
+2014-12-07 04:19:22,493 [270] INFO Rebus.Transports.Msmq.MsmqMessageQueue - Disposing message queue .\private$\zen.imobi.input
+2014-12-07 04:20:41,558 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection - Mapping assembly: PropertyLogic
+2014-12-07 04:20:41,611 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Data.IPropertiesRepository -> zen.imobi.input
+2014-12-07 04:20:41,613 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Data.LocationDao -> zen.imobi.input
+2014-12-07 04:20:41,614 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Data.PropertyContext -> zen.imobi.input
+2014-12-07 04:20:41,615 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.EventsHandlerSubscriber -> zen.imobi.input
+2014-12-07 04:20:41,617 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Events.PropertyCreated -> zen.imobi.input
+2014-12-07 04:20:41,619 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Location -> zen.imobi.input
+2014-12-07 04:20:41,620 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Data.PropertyDao -> zen.imobi.input
+2014-12-07 04:20:41,620 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Data.PropertiesRepository -> zen.imobi.input
+2014-12-07 04:20:41,621 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Migrations.InitialCommit -> zen.imobi.input
+2014-12-07 04:20:41,622 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Migrations.Configuration -> zen.imobi.input
+2014-12-07 04:20:41,622 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Property -> zen.imobi.input
+2014-12-07 04:20:41,622 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.PropertyStatus -> zen.imobi.input
+2014-12-07 04:20:41,623 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     <>f__AnonymousType0`7[<Id>j__TPar,<Country>j__TPar,<ZipCode>j__TPar,<Street>j__TPar,<City>j__TPar,<Latitude>j__TPar,<Longitude>j__TPar] -> zen.imobi.input
+2014-12-07 04:20:41,623 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     <>f__AnonymousType1`4[<Id>j__TPar,<Description>j__TPar,<Status>j__TPar,<UserId>j__TPar] -> zen.imobi.input
+2014-12-07 04:20:41,624 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     System.Diagnostics.Contracts.__ContractsRuntime -> zen.imobi.input
+2014-12-07 04:20:41,626 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     System.Diagnostics.Contracts.RuntimeContractsFlags -> zen.imobi.input
+2014-12-07 04:20:41,627 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     System.Diagnostics.Contracts.RuntimeContractsAttribute -> zen.imobi.input
+2014-12-07 04:20:41,627 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     System.Diagnostics.Contracts.__ContractsRuntime+ContractException -> zen.imobi.input
+2014-12-07 04:20:41,628 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     System.Diagnostics.Contracts.__ContractsRuntime+ContractException+ContractExceptionData -> zen.imobi.input
+2014-12-07 04:20:41,803 [87] INFO Rebus.Bus.RebusBus - Rebus bus 1 created
+2014-12-07 04:20:41,804 [87] INFO Rebus.Bus.RebusBus - Using external timeout manager with input queue 'rebus.timeout'
+2014-12-07 04:20:41,838 [87] INFO Rebus.Bus.RebusBus - Initializing bus with 1 workers
+2014-12-07 04:20:41,872 [87] INFO Rebus.Bus.Worker - Worker Rebus 1 worker 1 created and inner thread started
+2014-12-07 04:20:41,891 [87] INFO Rebus.Bus.Worker - Starting worker thread Rebus 1 worker 1
+2014-12-07 04:20:41,894 [87] INFO Rebus.Bus.RebusBus - Bus started
+2014-12-07 04:20:42,526 [Rebus 1 worker 1] INFO Rebus.Bus.SubscriptionMessageHandler - Saving: zen.imobi.input@MSI subscribed to PropertyLogic.Events.PropertyCreated
+2014-12-07 04:20:49,960 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\37 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:20:49,969 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\37 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:20:49,973 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\37 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:20:49,977 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\37 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:20:49,983 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\37 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:20:49,993 [Rebus 1 worker 1] ERROR Rebus.Bus.Worker - Handling message c1071bc9-6713-48a6-8955-afc56f3cf1d9\37 has failed the maximum number of times - details: 12/7/2014 4:20:49 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+
+12/7/2014 4:20:49 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+
+12/7/2014 4:20:49 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+
+12/7/2014 4:20:49 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+
+12/7/2014 4:20:49 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+2014-12-07 04:20:50,014 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - Message PropertyLogic.Events.PropertyCreated is forwarded to error queue
+2014-12-07 04:21:28,577 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\41 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:21:28,582 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\41 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:21:28,589 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\41 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:21:28,598 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\41 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:21:28,611 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\41 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:21:28,615 [Rebus 1 worker 1] ERROR Rebus.Bus.Worker - Handling message c1071bc9-6713-48a6-8955-afc56f3cf1d9\41 has failed the maximum number of times - details: 12/7/2014 4:21:28 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+
+12/7/2014 4:21:28 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+
+12/7/2014 4:21:28 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+
+12/7/2014 4:21:28 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+
+12/7/2014 4:21:28 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+2014-12-07 04:21:28,626 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - Message PropertyLogic.Events.PropertyCreated is forwarded to error queue
+2014-12-07 04:21:44,982 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\45 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:21:44,986 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\45 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:21:44,988 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\45 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:21:44,991 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\45 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:21:44,994 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\45 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:21:44,995 [Rebus 1 worker 1] ERROR Rebus.Bus.Worker - Handling message c1071bc9-6713-48a6-8955-afc56f3cf1d9\45 has failed the maximum number of times - details: 12/7/2014 4:21:44 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+
+12/7/2014 4:21:44 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+
+12/7/2014 4:21:44 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+
+12/7/2014 4:21:44 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+
+12/7/2014 4:21:44 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+2014-12-07 04:21:44,996 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - Message PropertyLogic.Events.PropertyCreated is forwarded to error queue
+2014-12-07 04:22:00,724 [275] INFO Rebus.Bus.Worker - Stopping worker thread Rebus 1 worker 1
+2014-12-07 04:22:00,727 [287] INFO Rebus.Bus.Worker - Disposing worker thread Rebus 1 worker 1
+2014-12-07 04:22:01,358 [287] INFO Rebus.Transports.Msmq.MsmqMessageQueue - Disposing message queue .\private$\zen.imobi.input
+2014-12-07 04:22:31,893 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection - Mapping assembly: PropertyLogic
+2014-12-07 04:22:31,956 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Data.IPropertiesRepository -> zen.imobi.input
+2014-12-07 04:22:31,959 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Data.LocationDao -> zen.imobi.input
+2014-12-07 04:22:31,960 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Data.PropertyContext -> zen.imobi.input
+2014-12-07 04:22:31,961 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.EventsHandlerSubscriber -> zen.imobi.input
+2014-12-07 04:22:31,962 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Events.PropertyCreated -> zen.imobi.input
+2014-12-07 04:22:31,963 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Location -> zen.imobi.input
+2014-12-07 04:22:31,963 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Data.PropertyDao -> zen.imobi.input
+2014-12-07 04:22:31,964 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Data.PropertiesRepository -> zen.imobi.input
+2014-12-07 04:22:31,966 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Migrations.InitialCommit -> zen.imobi.input
+2014-12-07 04:22:31,967 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Migrations.Configuration -> zen.imobi.input
+2014-12-07 04:22:31,968 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.Property -> zen.imobi.input
+2014-12-07 04:22:31,969 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     PropertyLogic.PropertyStatus -> zen.imobi.input
+2014-12-07 04:22:31,971 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     <>f__AnonymousType0`7[<Id>j__TPar,<Country>j__TPar,<ZipCode>j__TPar,<Street>j__TPar,<City>j__TPar,<Latitude>j__TPar,<Longitude>j__TPar] -> zen.imobi.input
+2014-12-07 04:22:31,972 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     <>f__AnonymousType1`4[<Id>j__TPar,<Description>j__TPar,<Status>j__TPar,<UserId>j__TPar] -> zen.imobi.input
+2014-12-07 04:22:31,976 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     System.Diagnostics.Contracts.__ContractsRuntime -> zen.imobi.input
+2014-12-07 04:22:31,978 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     System.Diagnostics.Contracts.RuntimeContractsFlags -> zen.imobi.input
+2014-12-07 04:22:31,979 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     System.Diagnostics.Contracts.RuntimeContractsAttribute -> zen.imobi.input
+2014-12-07 04:22:31,980 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     System.Diagnostics.Contracts.__ContractsRuntime+ContractException -> zen.imobi.input
+2014-12-07 04:22:31,980 [87] INFO Rebus.Configuration.DetermineMessageOwnershipFromRebusConfigurationSection -     System.Diagnostics.Contracts.__ContractsRuntime+ContractException+ContractExceptionData -> zen.imobi.input
+2014-12-07 04:22:32,217 [87] INFO Rebus.Bus.RebusBus - Rebus bus 1 created
+2014-12-07 04:22:32,219 [87] INFO Rebus.Bus.RebusBus - Using external timeout manager with input queue 'rebus.timeout'
+2014-12-07 04:22:32,243 [87] INFO Rebus.Bus.RebusBus - Initializing bus with 1 workers
+2014-12-07 04:22:32,298 [87] INFO Rebus.Bus.Worker - Worker Rebus 1 worker 1 created and inner thread started
+2014-12-07 04:22:32,307 [87] INFO Rebus.Bus.Worker - Starting worker thread Rebus 1 worker 1
+2014-12-07 04:22:32,309 [87] INFO Rebus.Bus.RebusBus - Bus started
+2014-12-07 04:22:33,078 [Rebus 1 worker 1] INFO Rebus.Bus.SubscriptionMessageHandler - Saving: zen.imobi.input@MSI subscribed to PropertyLogic.Events.PropertyCreated
+2014-12-07 04:22:44,842 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\51 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:22:44,855 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\51 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:22:44,861 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\51 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:22:44,864 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\51 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:22:44,867 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - User exception in Rebus 1 worker 1: Rebus.MessageHandleException: Could not handle message with ID c1071bc9-6713-48a6-8955-afc56f3cf1d9\51 ---> Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+   --- End of inner exception stack trace ---
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<TryProcessIncomingMessage>d__1d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__3(Object state)
+   at Rebus.Bus.RebusSynchronizationContext.Run()
+   at Rebus.Bus.Worker.MainLoop()
+2014-12-07 04:22:44,871 [Rebus 1 worker 1] ERROR Rebus.Bus.Worker - Handling message c1071bc9-6713-48a6-8955-afc56f3cf1d9\51 has failed the maximum number of times - details: 12/7/2014 4:22:44 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+
+12/7/2014 4:22:44 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+
+12/7/2014 4:22:44 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+
+12/7/2014 4:22:44 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+
+12/7/2014 4:22:44 AM:
+Rebus.UnhandledMessageException: Could not find any handlers to execute message of type PropertyLogic.Events.PropertyCreated
+   at Rebus.Bus.Dispatcher.<Dispatch>d__6`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Rebus.Bus.Worker.<DoTry>d__25.MoveNext()
+2014-12-07 04:22:44,906 [Rebus 1 worker 1] WARN Rebus.Bus.RebusBus - Message PropertyLogic.Events.PropertyCreated is forwarded to error queue
+2014-12-07 04:26:46,241 [312] INFO Rebus.Bus.Worker - Stopping worker thread Rebus 1 worker 1
+2014-12-07 04:26:46,244 [275] INFO Rebus.Bus.Worker - Disposing worker thread Rebus 1 worker 1
+2014-12-07 04:26:48,078 [275] INFO Rebus.Transports.Msmq.MsmqMessageQueue - Disposing message queue .\private$\zen.imobi.input

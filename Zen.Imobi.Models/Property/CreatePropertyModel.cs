@@ -41,5 +41,13 @@ namespace Zen.Imobi.Models.Property
         public bool SouthernOrientation { get; set; }
 
         public int Status { get; set; }
+
+        public bool IsRented
+        {
+            get
+            {
+                return Status == 2;
+            }
+        }
     }
 }

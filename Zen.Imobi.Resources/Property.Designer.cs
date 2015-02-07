@@ -97,6 +97,24 @@ namespace Zen.Imobi.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You can push this property for rental..
+        /// </summary>
+        public static string OfferPropertyForRent {
+            get {
+                return ResourceManager.GetString("OfferPropertyForRent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This property is rented..
+        /// </summary>
+        public static string PropertyRented {
+            get {
+                return ResourceManager.GetString("PropertyRented", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Southern orientation.
         /// </summary>
         public static string SouthernOrientation {

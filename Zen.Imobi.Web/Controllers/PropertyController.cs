@@ -62,19 +62,21 @@ namespace Zen.Imobi.Web.Controllers
             return View("Create", propertyModel);
         }
 
+        /// <summary>
+        /// Rents a property
+        /// </summary>
+        /// <param name="id">The id of the property.</param>
+        /// <returns></returns>
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Rent(Guid id)
         {
-            if (id.IsNull())
-            {
-                Throw.Exception<ApplicationException>("The Id of the property is empty.");
-            }
+            Guard.AgainstNullOrEmpty(id);
             
             var dbProperty = _property.GetOwnedProperty<RentPropertyModel>(id, UserId());
 
-            _property.Rent(id, UserId());
+            _property.ChangePropertyRentStatus(id, UserId(), PropertyStatus.Rented);
 
             // TODO: remmeber to display this in the VIEW
             ViewBag.CongratulationForRentalMessage = Zen.Imobi.Resources.Property.CongratulationForRentalMessage;
@@ -83,6 +85,20 @@ namespace Zen.Imobi.Web.Controllers
             // Ask for feedback on how the interaction went
 
             // todo: set an error message here since the posted model is not ok
+            return RedirectToAction("Index", new { id = id });
+        }
+
+        [Authorize]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult OfferForRent(Guid id)
+        {
+            Guard.AgainstNullOrEmpty(id);
+
+            var dbProperty = _property.GetOwnedProperty<RentPropertyModel>(id, UserId());
+
+            _property.ChangePropertyRentStatus(id, UserId(), PropertyStatus.Available);
+
             return RedirectToAction("Index", new { id = id });
         }
     }

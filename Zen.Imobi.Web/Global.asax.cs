@@ -19,14 +19,14 @@ namespace Zen.Imobi.Web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            
-            AutoMapperConfig.Start();
 
             var ninjectResolver = new NinjectDependencyResolver(NinjectWebCommon.Kernel);
             DependencyResolver.SetResolver(ninjectResolver);                        // MVC
-            GlobalConfiguration.Configuration.DependencyResolver = ninjectResolver; // Web.API
+            // todo: this needs to be fixed for the Web.API injection to work
+            //GlobalConfiguration.Configuration.DependencyResolver = ninjectResolver; // Web.API
 
-            BusMappings.Configure(NinjectWebCommon.Kernel);
+            // NOTE: add all application specific configs in this class
+            ApplicationConfig.Start();
         }
     }
 }

@@ -85,11 +85,37 @@ namespace PropertyLogic
             return result;
         }
 
-        public void Rent(Guid propertyId, Guid userId)
-        {
-            _propertiesRepository.RentProperty(propertyId, userId);
+        //public void Rent(Guid propertyId, Guid userId)
+        //{
+        //    _propertiesRepository.RentProperty(propertyId, userId);
 
-            _eventBus.Publish(new PropertyRented(userId, propertyId));
+        //    _eventBus.Publish();
+        //}
+
+        public bool ChangePropertyRentStatus(Guid propertyId, Guid userId, PropertyStatus status)
+        {
+            var result = _propertiesRepository.ChangePropertyRentStatus(propertyId, userId, status);
+
+            _eventBus.Publish(CreateEvent(userId, propertyId, status));
+
+            return result == 1;
+        }
+
+        private static PropertyEvent CreateEvent(Guid userId, Guid propertyId, PropertyStatus status)
+        {
+            var statusCode = (int)status;
+
+            if (statusCode == 2)
+            {
+                return new PropertyRented(userId, propertyId);
+            }
+
+            if (statusCode == 1)
+            {
+                return new PropertyOfferedForRent(userId, propertyId);
+            }
+
+            throw new ApplicationException(string.Format(@"Status '{0}' is not mapped to any event.", status));
         }
     }
 }
